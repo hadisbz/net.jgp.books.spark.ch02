@@ -52,8 +52,8 @@ object CsvToRelationalDatabaseScalaApp {
     // pom.xml
     val prop = new Properties
     prop.setProperty("driver", "org.postgresql.Driver")
-    prop.setProperty("user", "jgp")
-    prop.setProperty("password", "Spark<3Java")
+    prop.setProperty("user", "postgres")
+    prop.setProperty("password", "1")
 
     // Write in a table called ch02
     df.write.mode(SaveMode.Overwrite).jdbc(dbConnectionUrl, "ch02", prop)
